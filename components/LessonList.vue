@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="border-2 border-red-300 flex">
-      <div v-for="program in programs" :key="program.slug">{{ program }}</div>
+      <div
+        v-for="program in programs"
+        :key="program.slug"
+        class="border-blue border-2 rounded"
+      >{{ program }}</div>
     </div>
     <div class="flex flex-wrap">
       <nuxt-link
