@@ -49,11 +49,17 @@ export default {
   ],
 
   auth: {
+    redirect: {
+      login: '/',
+      logout: '/',
+      callback: '/auth/signed-in',
+    },
     strategies: {
       auth0: {
-        domain: 'dev-kaj3u-po.us.auth0.com',
-        clientId: 'dO3Jfv0VvAAedw9gwJRXGm37If1UvDJT',
-        audience: 'https://my-api-domain.com/'
+        domain: process.env.AUTH0_DOMAIN,
+        clientId: process.env.AUTH0_CLIENTID,
+        // audience: 'http://localhost:3000',
+        // logoutRedirectUri: 'http://localhost:3000',
       }
     }
   },
